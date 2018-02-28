@@ -11,6 +11,7 @@ function reveal(cell){
     cell.innerHTML = cell.value;
     cell.clicked = true;
 }
+//starts the timer
 function startTimer(){
     if (started == false){
         interval = setInterval(function(){
@@ -21,11 +22,13 @@ function startTimer(){
     }
     
 }
+//hides the cell
 function hide(cell){
     cell.style.backgroundColor = "green";
     cell.innerHTML = "";
     cell.clicked = false;
 }
+//checks if a cell is complete
 function complete(cell){
     numCompleted++;
     cell.completed = true;
